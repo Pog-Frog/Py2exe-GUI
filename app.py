@@ -2,6 +2,7 @@ import os
 import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk
+
 from PIL import Image, ImageTk
 
 path = os.path.dirname(os.path.abspath(__file__))
@@ -150,10 +151,10 @@ class Panel(tk.Tk):
         else:
             combo_temp1 = "--windowed"
         string = (
-            "pyinstaller --clean "
-            + combo_temp1
-            + self.CheckBoxVar2.get()
-            + self.CheckBoxVar3.get()
+                "pyinstaller --clean "
+                + combo_temp1
+                + self.CheckBoxVar2.get()
+                + self.CheckBoxVar3.get()
         )
         if self.CheckBoxVar1.get() == "" or self.entry1.get().strip() == "":
             pass
